@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        div{
+            text-align: left;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-left: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        legend{
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="button"] {
+            cursor: pointer;
+            color: #fff;
+            background-color: #4caf50;
+        }
+
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form method="post" onsubmit="return validateForm()">
+            <legend>Updation Form</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Name..."> <br> <br>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Email..."> <br> <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password..."> <br> <br>
+            <input type="submit" value="Sign in">
+            <input type="button" value="Reset">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (email === "" || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (password === "" || password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border: 4px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img id="main1" src="1.jpg" alt="rose" width="520">
+    </div>
+    
+    <div>
+        <img src="2.jpg" alt="rose" width="250" height="200" onclick="Imageclick(this)" id="img1">
+        <img src="3.jpg" alt="rose" width="250" height="200" onclick="Imageclick(this)" id="img2">
+    </div>
+    <script>
+        const Imageclick=(ele)=>{
+          const main=  document.getElementById("main1");
+          main.setAttribute("src",ele.src);
+        }
+        const a=document.getElementById("img1");
+        const b=document.getElementById("img2");
+        function MouseOver(){
+            a.style.border="4px solid red"
+        }
+        a.addEventListener("mouseover",MouseOver);
+        function MouseOut(){
+            a.style.border="4px solid gray"
+        }
+        a.addEventListener("mouseover",MouseOut);
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main img{
+            width: 800px;
+            height: 500px;
+
+        }
+        .subjects{
+            display: flex;
+            width: 800px;
+            overflow: hidden;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="main" >
+        <img id="mainImage" src="1.jpg" alt="" width="900">
+    </div>
+    <div  class="subjects">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="2.jpg" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="3.jpg" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="1.jpg" alt="" width="300" height="300">
+        <!-- <img src="/JavaScript/images/images (1).jpeg" alt=""> -->
+    </div>
+</body>
+<script>
+    const onImageClick = (ele) =>{
+        
+        const mainImage = document.getElementById("mainImage");
+        // let att = document.getElementsByTagName("img").getAttribute;
+        mainImage.setAttribute("src", ele.src)
+
+    }
+
+    const mouseOver = (ele) =>{
+        // ele.style.border = "50px, solid, red"
+        // ele.addEventListener('mouseover', MouseOver);
+        // function MouseOver(){
+            ele.style.border = "4px solid red";
+        // }
+    }
+
+    const mouseOut = (ele) =>{
+        ele.style.border = "none"
+    }
+
+
+
+</script>
+</html>

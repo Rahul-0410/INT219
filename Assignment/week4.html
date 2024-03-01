@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            /* width: 80%; */
+        }
+        .btn{
+            display: flex;
+            flex-direction: row;
+            /* margin: 10px; */
+            gap: 5px;
+            padding: 10px;
+        }
+        p{
+            text-align: center;
+            width: 700px;
+            font-size: 18px;
+        }
+        #image {
+            display: none; 
+            max-width: 500px;
+            max-height: 400px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>DOM Manipulation</h3>
+    <p id="paragraph">In the ever-evolving landscape of technology, JavaScript (JS) stands as a cornerstone, poised for an even more prominent role in the future. With its versatility and widespread adoption, JS is anticipated to continue flourishing, enabling developers to craft dynamic, interactive web experiences seamlessly. One significant direction for JS lies in its expansion beyond web development. With the rise of technologies like Node.js, JavaScript has transcended the browser, empowering developers to build server-side applications and even desktop applications. This trend is likely to intensify, with JS becoming increasingly ubiquitous across various domains of software development.</p>
+    <div class="btn">
+        <button onclick="toggleImage()">Toggle Image Visibility</button>
+    <!-- <br> -->
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <!-- <br> -->
+    <button onclick="changeParagraph()">Read More...</button>
+    </div>
+    
+    <img id="image" src="https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image">
+    </div>
+    
+
+    <script>
+        function toggleImage() {
+            var image = document.getElementById("image");
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        }
+
+        function changeBackgroundColor() {
+            var colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99']; 
+            var randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+            document.body.style.backgroundColor = randomColor; 
+        }
+
+       
+        function changeParagraph() {
+            var paragraph = document.getElementById("paragraph");
+            paragraph.textContent = "Moreover, the future of JavaScript is intertwined with the growth of web assembly (Wasm), a binary instruction format enabling high-performance execution in web browsers. JS's compatibility with Wasm opens doors to new possibilities, such as executing code written in other languages like C, C++, or Rust directly within the browser environment. This convergence of JS and Wasm promises not only enhanced performance but also broader capabilities, empowering developers to create more complex and feature-rich web applications. As such, JavaScript's future appears brighter than ever, with its adaptability and innovation driving the next wave of technological advancements on the web and beyond.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main img{
+            width: 1500px;
+            height: 500px;
+
+        }
+        .subjects{
+            display: flex;
+            width: 1000px;
+            /* overflow: hidden; */
+            
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="main" >
+        <img id="mainImage" src="https://images.unsplash.com/photo-1704137477371-bed38523c2eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="800px">
+    </div>
+    <div  class="subjects">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="https://images.unsplash.com/photo-1705591878587-8c2cb45f1e91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="https://images.unsplash.com/photo-1704137477456-2c748b28927a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="https://images.unsplash.com/photo-1696104613970-fc7f58d1ff39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="https://images.unsplash.com/photo-1704137477371-bed38523c2eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="300" height="300">
+        <img class="images" onclick="onImageClick(this)" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" src="https://images.unsplash.com/photo-1708616556060-fa6dd952842e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D" alt="" width="300" height="300">
+        <!-- <img src="/JavaScript/images/images (1).jpeg" alt=""> -->
+    </div>
+</body>
+<script>
+    const onImageClick = (ele) =>{
+        
+        const mainImage = document.getElementById("mainImage");
+        // let att = document.getElementsByTagName("img").getAttribute;
+        mainImage.setAttribute("src", ele.src)
+
+    }
+
+    const mouseOver = (ele) =>{
+        // ele.style.border = "50px, solid, red"
+        // ele.addEventListener('mouseover', MouseOver);
+        // function MouseOver(){
+            ele.style.border = "4px solid red";
+        // }
+    }
+
+    const mouseOut = (ele) =>{
+        ele.style.border = "none"
+    }
+
+
+
+</script>
+</html>

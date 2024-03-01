@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(124, 255, 0);
+        }
+
+        .diva {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            align-items: center;
+            height: 650px;
+            width: 500px;
+            margin: -80px auto;
+            /* padding-left: 20px; */
+        }
+
+        form {
+            padding-top: 10px;
+            background-color: rgb(6, 152, 98);
+            padding-left: 10px;
+        }
+
+        label {
+            font-size: 21px;
+            padding-right: 5px;
+        }
+
+        .span {
+            width: 100%;
+            align-items: center;
+            padding-left: 130px;
+            padding-bottom: 5px;
+        }
+
+        .space {
+            padding-right: 60px;
+        }
+
+        .gender {
+            padding-top: 4px;
+        }
+
+        .heading {
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        .term {
+            padding-left: 15px;
+        }
+
+        .up{
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Don't have an account?! Want to join us?!</h1>
+    </div>
+
+    <div class="diva">
+        <form method="post">
+
+            <label for="name" class="space">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Name..."> <br> <br>
+            <label for="email" class="space">Email:</label>
+            <input type="text" name="Email" id="Email" placeholder="@email..."> <br> <br>
+            <span class="gender">
+                <label for="gender" class="space">Gender</label>
+                <input type="radio" name="gender" id="male" required value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" required value="Female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other" required value="other">
+                <label for="other">Other</label>
+            </span>
+
+            <br> <br>
+
+            <label for="city" class="space">Select City</label>
+            <select name="city" id="city">
+                <option value="Jalandhar">Jalandhar</option>
+                <option value="Ludhiana">Ludhiana</option>
+                <option value="Amritsar">Amritsar</option>
+            </select>
+            <br><br>
+            <span class="area">
+                <label for="address" class="space up">Address:</label>
+                <textarea name="address" id="address" cols="20" rows="5" placeholder="address"></textarea>
+                <!-- <input type="text" id="address" name="address" style="height: 100px;" placeholder="address..."> -->
+            </span>
+
+            <br><br>
+            <label for="file" class="space">Select file</label>
+            <input type="file" name="file" id="file"> <br><br>
+            <label for="password" class="space">Password:</label>
+            <input type="password" name="password" id="password" placeholder="password..." minlength="6"> <br> <br>
+            <span class="term"><input type="checkbox" name="term" id="term">
+                <label for="term">I agree to all the terms and conditions.</label></span>
+            <br><br>
+            <span class="span">
+                <input type="submit" value="sign in">
+                <input type="submit" value="Reset">
+            </span>
+            <br><br>
+
+        </form>
+    </div>
+</body>
+
+</html>

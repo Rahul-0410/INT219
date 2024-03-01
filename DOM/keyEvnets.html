@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="y">Press any key on your keyboard:</p>
+    <div id="eventInfo"></div>
+    <script>
+        function displayEventInformation(event) {
+            const eventInforDiv = document.getElementById("eventInfo");
+            eventInforDiv.innerHTML = `
+            <p>Event Type: ${event.type}</p>
+            <p>Key code: ${event.keyCode}</p>
+            <p>Key: ${event.key}</p>
+            `;
+            if (event.key == 'c') {
+                document.getElementById("y").style.backgroundColor = "red";
+            }
+            else if (event.key == 'b') {
+                document.body.style.backgroundColor = "blue";
+            }
+            else if (event.key == 'u') {
+                let elem = document.createElement("div");
+                elem.id = "you";
+                elem.innerHTML = "Hello how are you"
+                elem.style.color = "skyblue";
+                document.body.insertBefore(elem, document.body.childNodes[0]);
+                // Create two more div elements
+                for (let i = 0; i < 2; i++) {
+                    let newDiv = document.createElement("div");
+                    newDiv.innerHTML = "New div " + (i + 1); // Set content for the new div
+                    newDiv.style.color = "orange"; // Set color for the new div
+                    newDiv.style.border = "1px solid black"; // Set color for the new div
+                    newDiv.style.width = "400px"; // Set width for the new div
+                    newDiv.style.margin = "20px"; // Set width for the new div
+                    newDiv.style.height = "400px"; // Set height for the new div
+                    elem.appendChild(newDiv); // Append the new div to the existing div
+                }
+
+
+            }
+        }
+        //add event listener for keydown 
+        // document.addEventListener('keydown',function(event){
+        //     displayEventInformation(event);
+
+        // })
+
+        // it will display output when the key is pressed and released
+        document.addEventListener('keyup', function (event) {
+            displayEventInformation(event);
+        })
+    </script>
+</body>
+
+</html>

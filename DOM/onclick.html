@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="now">NOW</button>
+    <div style="width: 500; border: 1px solid red;" id="pop">
+        kpdgvxbnqklwd
+    </div>
+    <script>
+        // const body=document.body;
+        const body=document.getElementById("pop");
+        const a=document.getElementById("now");
+        a.onclick=function(){
+            alert('now');
+        }
+         function wow(){
+            body.style.backgroundColor="red";
+         }
+        body.addEventListener("mouseover",wow)
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+    <style>
+        body{
+            transition: background-color 5s;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: solid;">
+        <p>Move mouse over here</p>
+    </div>    
+    <script>
+        const body = document.body;
+        function handlemouseout(){
+            body.style.backgroundColor = "green";
+        }
+        function handlemouseover(){
+            body.style.backgroundColor = "yellow";
+
+        }
+        body.addEventListener("mouseover",handlemouseover);
+        body.addEventListener("mouseout",handlemouseout);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        div{
+            margin: 0 auto;
+            width: 30%;
+            text-align: center;
+        }
+        h1{
+            font-size: 36px;
+        }
+        p{
+            font-size: 24px;
+        }
+        button{
+            width: 60px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        .bt1{
+            background-color: red;
+        }
+        .bt2{
+            background-color: blue;
+        }
+        .bt3{
+            background-color: violet;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Stopwatch</h1>
+        <p id="demo">00:00:00</p>
+        <button class="bt1" onclick="start()">Start</button>
+        <button class="bt2" onclick="stop()">Stop</button>
+        <button class="bt3" onclick="reset()">Reset</button>
+    </div>
+   
+    <script>
+        let i;
+        function start(){
+            i=setInterval(countDown,1000);
+        }
+        let sec=0;
+        let min=0;
+        let hour=0;
+        // function countDown(){
+        //     let ob=document.getElementById("demo");
+        //     sec++;
+        //     if(min==60){
+        //         hour++;
+        //         min=0;
+        //         ob.innerHTML=`${hour}:${min}:${sec}`
+        //     } 
+        //    else  if(sec==60){
+        //         // hour++;
+        //         min++;
+        //         sec=0;
+        //         ob.innerHTML=`${hour}:${min}:${sec}`
+        //     } else{
+        //         ob.innerHTML=`${hour}:${min}:${sec}`
+        //     }
+        //     let hrString = hour; 
+        // let minString = minute; 
+        // let secString = second; 
+        // let countString = count; 
+  
+        // // if (hour < 10) { 
+        // //     hrString = "0" + hrString; 
+        // // } 
+  
+        // // if (minute < 10) { 
+        // //     minString = "0" + minString; 
+        // // } 
+  
+        // // if (second < 10) { 
+        // //     secString = "0" + secString; 
+        // // } 
+  
+        // // if (count < 10) { 
+        // //     countString = "0" + countString; 
+        // // }
+            
+        // }
+        // modified one
+        function countDown(){
+            let ob=document.getElementById("demo");
+            sec++;
+            if(min==60){
+                hour++;
+                min=0;
+            } 
+            else if(sec==60){
+                min++;
+                sec=0;
+            }
+            let hourStr = hour < 10 ? "0" + hour : hour;
+            let minStr = min < 10 ? "0" + min : min;
+            let secStr = sec < 10 ? "0" + sec : sec;
+            ob.innerHTML=`${hourStr}:${minStr}:${secStr}`;
+        }
+        function stop(){
+            clearInterval(i);
+        }
+
+        function reset(){
+            let ob=document.getElementById("demo");
+            ob.innerHTML="00:00:00";
+            clearInterval(i);
+            // let j=setInterval(countDown,1000);
+        }
+    </script>
+</body>
+</html>

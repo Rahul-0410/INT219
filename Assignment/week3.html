@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>JavaScript try catch</h3>
+    <h5>Enter a number between 5 and 10</h5>
+    <input value="" id="demo" placeholder="input" type="text" required />
+    
+
+    <button onclick="clicks()">Submit</button>
+    <br>
+    
+    <p id ="para"></p>
+    <script>
+       function clicks(){
+        const x = document.getElementById("demo").value;
+        const msg = document.getElementById("para");
+        try{
+            if(x==" ") throw "is empty";
+            if(isNaN(x)) throw " is not a number";
+            if(x>5) throw "enter a number smaller or equal to 5";
+            if(x<0) throw "enter a number greater then 0"; 
+        }
+        catch(err){
+           msg.textContent = err;
+        }
+        }
+    </script>
+</body>
+</html>

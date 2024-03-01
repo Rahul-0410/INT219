@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello world</h2>
+    <script>
+        function handleLoad(){
+            alert("Page has loaded");
+        }
+        window.addEventListener('load',handleLoad);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagating</title>
+    <style>
+        div{
+            border: 10px solid black;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="second">
+            <div id="third" >
+                
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        const first = document.getElementById("first")
+        const second = document.getElementById("second")
+        const third = document.getElementById("third")
+        first.addEventListener('click', ()=>{
+            first.style.borderColor = "red"
+            
+        })
+        second.addEventListener('click', ()=>{
+            second.style.borderColor = "blue"
+        })
+        third.addEventListener('click', ()=>{
+            third.style.borderColor = "yellow"
+            
+        })
+    </script>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Press Counter</title>
+</head>
+<body>
+    <button id="pressButton">Press me!</button>
+    <p>Press count: <span id="pressCount">0</span></p>
+
+    <script>
+
+        // const button = document.getElementById('pressButton');
+        // const countDisplay = document.getElementById('pressCount');
+
+        
+        // let count = 0;
+        // button.addEventListener('click', () => {
+        //     // Increment count and update display
+        //     count++;
+        //     countDisplay.textContent = count;
+        // });
+
+        const button=document.getElementById("pressButton");
+        const co=document.getElementById("pressCount");
+        let count=0;
+        button.addEventListener('click',function(){
+            count++;
+            co.textContent=count;
+        })
+    </script>
+</body>
+</html>
