@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rahul</h1>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently pursuing B.Tech CSE from LPU and I am aspiring to become a full stack web developer. </p>
+  </section>
+
+  <section id="qualifications">
+    <h2>Qualifications</h2>
+    <ul>
+      <li>Educational qualifications (e.g., degrees, certifications)</li>
+      <li>Work experience</li>
+      <li>Skills and expertise</li>
+      <li>Achievements and awards</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; Rahul
+    <div id="social-links"></div>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+        }
+      });
+
+      var linkedInLink = '<a href="https://www.linkedin.com/in/rahul0410/" target="_blank">LinkedIn</a>';
+      $('#social-links').append(linkedInLink);
+    });
+  </script>
+</body>
+</html>
