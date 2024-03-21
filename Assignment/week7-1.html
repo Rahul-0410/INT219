@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <p id="demo"></p> -->
+    <p id="demo1"></p>
+    <script>
+        var stud={
+            name:"Rahul",
+            cgpa:8.7,
+            courses:"HTML"
+        }
+        var stud1=JSON.stringify(stud);
+        document.getElementById("demo1").innerHTML=stud1;
+        var stud2={
+            "name":"Rahul",
+            "cgpa":8.7,
+            "courses":"HTML"
+        }
+        var stud3=JSON.parse(stud);
+        document.getElementById("demo").innerHTML=stud2;
+    </script>
+</body>
+</html>
