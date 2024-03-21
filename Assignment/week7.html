@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON String/Object Conversion</title>
+</head>
+<body>
+  <div>
+    <label for="inputString">Enter JSON String:</label>
+    <input type="text" id="inputString">
+    <button onclick="convertStringToObject()">Convert to Object</button>
+  </div>
+  <div>
+    <label for="outputObject">Object:</label>
+    <textarea id="outputObject" readonly></textarea>
+  </div>
+  <div>
+    <label for="inputObject">Enter Object:</label>
+    <textarea id="inputObject"></textarea>
+    <button onclick="convertObjectToString()">Convert to String</button>
+  </div>
+  <div>
+    <label for="outputString">JSON String:</label>
+    <input type="text" id="outputString" readonly>
+  </div>
+
+  <script>
+    function convertStringToObject() {
+      const jsonString = document.getElementById('inputString').value;
+      try {
+        const parsedObject = JSON.parse(jsonString);
+        document.getElementById('outputObject').value = JSON.stringify(parsedObject, null, 2);
+      } catch (error) {
+        alert('Error parsing JSON string');
+      }
+    }
+
+    function convertObjectToString() {
+      const inputObject = document.getElementById('inputObject').value;
+      try {
+        const stringifiedObject = JSON.stringify(JSON.parse(inputObject));
+        document.getElementById('outputString').value = stringifiedObject;
+      } catch (error) {
+        alert('Error converting object to string.');
+      }
+    }
+  </script>
+</body>
+</html>
