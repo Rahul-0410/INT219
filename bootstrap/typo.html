@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Border and Columns Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .btn-center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .heading-center {
+            text-align: center;
+        }
+        
+        .para {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col border border-primary">
+                1 
+            </div>
+            <div class="col border border-black">
+                2 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border border-secondary">
+                3 
+            </div>
+            <div class="col border border-danger">
+                4
+            </div>
+            <div class="col border border-warning">
+                5
+            </div>
+        </div>
+    </div>
+    <div class="container btn-center">
+        <button type="button" class="btn btn-primary">Click</button>
+    </div>
+    <br>
+    <div class="container heading-center">
+        <h3>
+            Fancy display heading
+            <small class="text-muted">With faded secondary text</small>
+        </h3>
+    </div>
+    <div class="container para border border-secondary">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero modi sed eius labore voluptas, soluta sint provident ratione laborum debitis?</p>
+        <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, ipsa quo. Praesentium cupiditate veritatis numquam accusantium quam reiciendis iste nemo.</p>
+    </div>
+    <div class="container heading-center">
+        <figure>
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></figcaption>
+        </figure>
+    </div>
+    <a href="border.html" download>Download File</a>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
