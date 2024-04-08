@@ -1,0 +1,11 @@
+input[type="submit"]{
+    /* border: 2px solid black; */
+    color: red;
+}
+label{
+    padding-right: 10px;
+}
+.input{
+    display: flex;
+    padding-top: 10px;
+}
